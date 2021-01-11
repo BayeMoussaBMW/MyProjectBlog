@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+	<div class="container">
+		<div class="d-flex flex-column">
+			<h4>Members</h4>
+			<p>Here are members of this websites.</p>
+			{% for account in accounts %}
+			<p>{{account.username}} | {{ account.date_joined}}</p>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+
+{% endblock content %}
